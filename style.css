@@ -46,6 +46,7 @@ h1 {
 h2 {
     font-size: 2rem;
     color: #002147;
+    text-align: center;
 }
 
 .service {
@@ -56,16 +57,36 @@ h2 {
     transition: transform 0.3s ease-in-out;
 }
 
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-box {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    /* Adjust as needed */
+    min-height: 120px;
+    /* Ensure equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 .service:hover {
     transform: scale(1.05);
 }
 
-#contact {
-    padding: 50px;
-    background: #f9f9f9;
-}
 
-input, textarea {
+
+input,
+textarea {
     width: 80%;
     padding: 12px;
     margin: 10px;
@@ -89,12 +110,14 @@ button:hover {
     background: #0056b3;
 }
 
+
 footer {
     background: #222;
     color: white;
     padding: 20px;
     margin-top: 20px;
 }
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     h1 {
@@ -114,7 +137,44 @@ footer {
         padding: 15px;
     }
 
-    input, textarea {
+    input,
+    textarea {
         width: 90%;
     }
 }
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%; /* Make all input fields and textarea the same width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-form textarea {
+    resize: none; /* Prevent unwanted resizing */
+    height: 120px; /* Set a uniform height */
+  }
+  
+  .contact-form button {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end; /* Align button to the right */
+  }
+  
+  .contact-form button:hover {
+    background-color: #003366;
+  }
+  
